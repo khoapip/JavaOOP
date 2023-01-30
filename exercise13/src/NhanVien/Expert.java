@@ -18,7 +18,7 @@ public class Expert extends Employee{
 
     private String proSkill;
 
-    public Expert(String id, String name, String DOB, String phone, String email, String employeeType,  List<Certificate> cert, int expYear, String proSkill){
+    public Expert(String id, String name, String DOB, String phone, String email,  List<Certificate> cert, int expYear, String proSkill){
         super(id, name, DOB, phone, email, 0,cert);
         this.expYear = expYear;
         this.proSkill = proSkill;

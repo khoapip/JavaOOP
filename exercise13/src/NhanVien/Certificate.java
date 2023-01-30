@@ -1,6 +1,6 @@
 package NhanVien;
 
-public abstract class Certificate {
+public class Certificate {
     String CertificatedID, CertificateName, CertificateRank, CertificatedDate;
     public Certificate(String CertificatedID, String CertificateName, String CertificateRank, String CertificatedDate){
         this.CertificatedDate = CertificatedDate;

@@ -19,8 +19,8 @@ public class Fresher extends Employee{
     private String schoolGrad;
     private String classRank;
 
-    public Fresher(String id, String name, String DOB, String phone, String email, String employeeType, List<Certificate> cert, LocalDate gradDate, String schoolGrad, String classRank){
-        super(id, name, DOB, phone, email, 0,cert);
+    public Fresher(String id, String name, String DOB, String phone, String email, List<Certificate> cert, LocalDate gradDate, String schoolGrad, String classRank){
+        super(id, name, DOB, phone, email, 1,cert);
         this.gradDate = gradDate;
         this.schoolGrad = schoolGrad;
         this.classRank = classRank;

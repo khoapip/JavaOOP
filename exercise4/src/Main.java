@@ -1,41 +1,49 @@
-import giadinh.*;
+import giadinh.GiaDinh;
+import giadinh.HoGiaDinh;
+import giadinh.Nguoi;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-import java.util.*;
+
+// This is sudo code. To overview how to do it.
+// You can finish by fill you code
+
 public class Main {
     public static void main(String[] args) {
-
-
-        HoGiaDinh hoGiaDinh = new HoGiaDinh();
+        HoGiaDinh town = new HoGiaDinh();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhap n:");
+        System.out.println("Enter n:");
         int n = scanner.nextInt();
         for(int i = 0; i < n; i++) {
-            System.out.println("Dia Chi:");
+            // Input foreach famili
+
+            System.out.println("Enter address:");
             scanner.nextLine();
             String address = scanner.nextLine();
 
             // Enter person number in family
             List<Nguoi> persons = new ArrayList<>();
-            System.out.println("So Nguoi trong nha");
+            System.out.println("Enter number person");
             int number = scanner.nextInt();
 
             for (int j = 0; j < number; j++) {
-                System.out.println("Nhap Ten Nguoi");
-                String name = scanner.next();
-                System.out.println("Nhap tuoi");
+                System.out.println("Input Name");
+                String name = scanner.nextLine();
+                System.out.println("Input Age");
                 int age = scanner.nextInt();
-                System.out.println("Nhap cccd");
-                String id = scanner.next();
-                System.out.println("Nhap Nghe Nghiep");
-                String job = scanner.next();
+                System.out.println("Input Job");
+                String job = scanner.nextLine();
+                System.out.println("Input cmnd");
+                String cmnd = scanner.nextLine();
 
-                persons.add(new Nguoi(name, age, job, id));
-
+                persons.add(new Nguoi(name, age, job, cmnd));
             }
 
-            hoGiaDinh.themNha(new GiaDinh(persons,address ));
+            // After done input
+            town.themNha(new GiaDinh(persons,address ));
 
 
         }
-    }    }
+    }
 }

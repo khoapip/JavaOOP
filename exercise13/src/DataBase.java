@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 import NhanVien.*;
@@ -28,6 +27,7 @@ public class DataBase {
             data.stream().map(employee -> employee.getId().equals(e.getId()) ? e : employee);
         }
     }
+
 
     public List<Employee> findByType(int type) {
         return this.data.stream()
