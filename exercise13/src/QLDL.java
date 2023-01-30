@@ -79,15 +79,16 @@ public class QLDL {
         Scanner scanner = ScannerFac.getScanner();
         System.out.println("Input number of cert to input");
         int no = scanner.nextInt();
+        scanner.nextLine();
         for (int i = 0; i < no; i ++){
             System.out.println("Input cert id");
-            String id = scanner.next();
+            String id = scanner.nextLine();
             System.out.println("Input cert name");
-            String name = scanner.next();
+            String name = scanner.nextLine();
             System.out.println("Input cert rank");
-            String rank = scanner.next();
+            String rank = scanner.nextLine();
             System.out.println("Input cert date");
-            String date = scanner.next();
+            String date = scanner.nextLine();
             certs.add(new Certificate(id, name, rank , date));
         }
         return certs;
@@ -96,6 +97,7 @@ public class QLDL {
         Scanner scanner = ScannerFac.getScanner();
         System.out.print("Input Year of Exp: ");
         int expYear = scanner.nextInt();
+        scanner.nextLine();
         System.out.print("Input Pro Skill: ");
         String proskill = scanner.nextLine();
         List<Certificate> cert = getCert();
@@ -105,7 +107,7 @@ public class QLDL {
     private Intern insertIntern(String id, String name, String email, String birthday, String phone) {
         Scanner scanner = ScannerFac.getScanner();
         System.out.print("Input semester");
-        String semester = scanner.next();
+        String semester = scanner.nextLine();
         System.out.print("Input School: ");
         String school = scanner.nextLine();
         System.out.print("Input major: ");
@@ -201,9 +203,13 @@ public class QLDL {
     }
 
     private void phoneCheck(String phone) throws PhoneException{
-        if (!phone.startsWith("09") || !phone.startsWith("08")){
+        if (!phone.startsWith("09") && !phone.startsWith("08")){
             throw new PhoneException("Invaid phone number");
         }
+    }
+
+    public void print(){
+        database.print();
     }
 
 }

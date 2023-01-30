@@ -10,7 +10,13 @@ public class DataBase {
     }
 
     public Employee findById(String id) {
-        return this.data.stream().filter(employee -> employee.getId().equals(id)).findFirst().orElse(null);
+        if (!this.data.isEmpty()){
+            return this.data.stream().filter(employee -> employee.getId().equals(id)).findFirst().orElse(null);
+        }
+        else{
+            System.out.println("DATA EMPTY, EXITING...");
+            return  null;
+        }
     }
 
 
@@ -45,5 +51,11 @@ public class DataBase {
                 })
                 .collect(Collectors.toList());
     }
+
+    public void print(){
+        data.forEach(Employee::showMe);
+    }
+
+
 
 }

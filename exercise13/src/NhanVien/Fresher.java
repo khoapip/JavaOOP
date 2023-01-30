@@ -50,8 +50,12 @@ public class Fresher extends Employee{
         this.gradDate = gradDate;
     }
 
-    @Override
+
     public void showMe(){
+        System.out.println(toString());
+    }
+    @Override
+    public String toString(){
         String out =  "Intern{" +
                 "id='" + id + '\'' +
                 ", fullName='" + name + '\'' +
@@ -61,7 +65,7 @@ public class Fresher extends Employee{
                 ", majo=" + classRank + ", school=" + schoolGrad + "semester" + gradDate +
                 ", proSkill='" + classRank + '\'' +
                 '}';
-        System.out.println(out);
+        return  out;
     }
 
 }

@@ -42,6 +42,10 @@ public class Expert extends Employee{
 
     @Override
     public void showMe(){
+        System.out.println(toString());
+    }
+    @Override
+    public String toString(){
         String out =  "Experience{" +
                 "id='" + id + '\'' +
                 ", fullName='" + name + '\'' +
@@ -51,7 +55,7 @@ public class Expert extends Employee{
                 ", yearOfExperience=" + expYear +
                 ", proSkill='" + proSkill + '\'' +
                 '}';
-        System.out.println(out);
-    }
 
+        return out;
+    }
 }

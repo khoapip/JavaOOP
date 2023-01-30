@@ -51,7 +51,7 @@ public class Intern extends Employee{
     }
 
     @Override
-    public void showMe(){
+    public String  toString(){
         String out =  "Intern{" +
                 "id='" + id + '\'' +
                 ", fullName='" + name + '\'' +
@@ -61,7 +61,10 @@ public class Intern extends Employee{
                 ", majo=" + major + ", school=" + school + "semester" + semester +
                 ", proSkill='" + major + '\'' +
                 '}';
-        System.out.println(out);
+        return out;
     }
 
+    public void showMe(){
+        System.out.println(toString());
+    }
 }
